@@ -18,7 +18,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, delay }) => (
       <img 
         src={skill.icon} 
         alt={skill.name} 
-        className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain" 
+        className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain" // Increased icon size
       />
     </div>
     {/* Skill name text removed from direct view to make icons primary focus, title attribute provides it on hover */}
@@ -31,11 +31,11 @@ interface SkillsSectionProps {
 }
 
 const SkillsSection: React.FC<SkillsSectionProps> = ({ id }) => {
-  const getDelay = (index: number, totalItems: number) => {
+  // Removed unused 'totalItems' parameter
+  const getDelay = (index: number) => { 
     const baseDelay = 50;
     const spreadFactor = 30;
-    // Determine number of columns based on common breakpoints, or use a fixed number for simplicity
-    // This is a simplified calculation, a more robust solution might use window width or a ref
+    // Determine number of columns based on common breakpoints
     const numCols = window.innerWidth < 640 ? 3 : (window.innerWidth < 768 ? 4 : (window.innerWidth < 1024 ? 5 : (window.innerWidth < 1280 ? 6: 7)));
     
     const rowIndex = Math.floor(index / numCols);
@@ -50,7 +50,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ id }) => {
       id={id}
       title="Tech Stack"
       subtitle="My toolbox of languages, frameworks, and technologies I work with."
-      className="bg-neutral" // Section background: slightly lighter dusty purple
+      className="bg-neutral" 
       titleClassName="text-textBase"
     >
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-4 md:gap-6">
@@ -58,7 +58,8 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ id }) => {
           <SkillCard
             key={skill.id}
             skill={skill}
-            delay={getDelay(index, ALL_SKILLS.length)}
+            // Removed ALL_SKILLS.length from the call
+            delay={getDelay(index)} 
           />
         ))}
       </div>
