@@ -133,4 +133,11 @@ export const PROJECTS_DATA: Project[] = [
     date: 'Jan. 2024',
     // repoUrl: `https://github.com/${YOUR_GITHUB_USERNAME}/aircraft-classification`, // Example
   },
+  {id: 'project-nrsc-satellite',
+   title: 'Satellite Image Processing & Vegetation Classification',
+   description: 'Developing 3D CNN and LSTM approach for classifying satellite imagery to identify and monitor vegetation changes for government applications at the National Remote Sensing Centre (NRSC).',
+   imageUrl: 'projects/nrsc.png',
+   tags: ['Satellite Imagery Processing', 'Speckle Noise Techniques','3D CNN + LSTM'],
+   date: 'Ongoing',
+  },
 ];
