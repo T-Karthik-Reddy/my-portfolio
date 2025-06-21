@@ -3,6 +3,7 @@ import { NavItem, Skill, Project, ContactLink } from './types';
 // Import FontAwesome icons that are still used (e.g., for resume download, heart icon)
 import { faDownload, faHeart } from '@fortawesome/free-solid-svg-icons';
 
+
 // Placeholder Name and Links - REMEMBER TO REPLACE THESE!
 export const YOUR_NAME = "T Karthik Reddy"; // Updated Name
 export const YOUR_EMAIL = "karthikreddytheepi@gmail.com"; // Generic placeholder email
