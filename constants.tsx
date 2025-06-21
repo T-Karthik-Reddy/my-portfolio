@@ -10,7 +10,7 @@ export const YOUR_LINKEDIN_USERNAME = "tkarthikreddy"; // Generic placeholder
 export const YOUR_GITHUB_USERNAME = "T-Karthik-Reddy"; // Generic placeholder
 export const YOUR_LEETCODE_USERNAME = "tkarthikreddy"; // Generic placeholder for LeetCode
 // Ensure this resume path is correct and the file exists in the public folder
-export const YOUR_RESUME_PATH = "/t_karthik_reddy_resume.pdf"; 
+export const YOUR_RESUME_PATH = "t_karthik_reddy_resume.pdf"; 
 
 export const NAVBAR_LOGO_TEXT = "KR";
 export const SITE_TITLE = `${YOUR_NAME} | AI & Web Portfolio`;
@@ -43,32 +43,32 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const ALL_SKILLS: Skill[] = [
-  { id: 'python', name: 'Python', icon: '/logos/python-logo.png' },
-  { id: 'javascript', name: 'JavaScript', icon: '/logos/javascript-logo.png' },
-  { id: 'react', name: 'React', icon: '/logos/react-logo.png' },
-  { id: 'nodejs', name: 'Node.js', icon: '/logos/nodejs-logo.png' },
-  { id: 'html5', name: 'HTML5', icon: '/logos/html-logo.png' },
-  { id: 'css3', name: 'CSS3', icon: '/logos/css-logo.png' },
+  { id: 'python', name: 'Python', icon: 'logos/python-logo.png' },
+  { id: 'javascript', name: 'JavaScript', icon: 'logos/javascript-logo.png' },
+  { id: 'react', name: 'React', icon: 'logos/react-logo.png' },
+  { id: 'nodejs', name: 'Node.js', icon: 'logos/nodejs-logo.png' },
+  { id: 'html5', name: 'HTML5', icon: 'logos/html-logo.png' },
+  { id: 'css3', name: 'CSS3', icon: 'logos/css-logo.png' },
   // Assuming user will add tailwind-logo.png to public/logos/
-  { id: 'tailwindcss', name: 'Tailwind CSS', icon: '/logos/tailwind-logo.png' }, 
-  { id: 'tensorflow', name: 'TensorFlow', icon: '/logos/tensorflow-logo.png' },
-  { id: 'pytorch', name: 'PyTorch', icon: '/logos/pytorch-logo.png' },
+  { id: 'tailwindcss', name: 'Tailwind CSS', icon: 'logos/tailwind-logo.png' }, 
+  { id: 'tensorflow', name: 'TensorFlow', icon: 'logos/tensorflow-logo.png' },
+  { id: 'pytorch', name: 'PyTorch', icon: 'logos/pytorch-logo.png' },
   // Assuming user will add scikitlearn-logo.png to public/logos/
-  { id: 'scikitlearn', name: 'Scikit-learn', icon: '/logos/scikitlearn-logo.png' }, 
-  { id: 'git', name: 'Git', icon: '/logos/git-logo.png' },
-  { id: 'docker', name: 'Docker', icon: '/logos/docker-logo.png' },
-  { id: 'matlab', name: 'MATLAB', icon: '/logos/matlab-logo.png' },
-  { id: 'sql', name: 'SQL (MySQL)', icon: '/logos/mysql-logo.png' },
-  { id: 'postgres', name: 'PostgreSQL', icon: '/logos/postgres-logo.png' }, // Changed from MongoDB
-  { id: 'nlp', name: 'NLP (Hugging Face)', icon: '/logos/huggingface-logo.png' },
-  { id: 'cv', name: 'Computer Vision (OpenCV)', icon: '/logos/opencv-logo.png' },
-  { id: 'c', name: 'C', icon: '/logos/c-logo.png' },
-  { id: 'cpp', name: 'C++', icon: '/logos/cpp-logo.png' },
-  { id: 'flask', name: 'Flask', icon: '/logos/flask-logo.png' },
-  { id: 'keras', name: 'Keras', icon: '/logos/keras-logo.png' },
-  { id: 'java', name: 'Java', icon: '/logos/java-logo.png' },
-  { id: 'jenkins', name: 'Jenkins', icon: '/logos/jenkins-logo.png' },
-  { id: 'spring', name: 'Spring', icon: '/logos/spring-logo.png' },
+  { id: 'scikitlearn', name: 'Scikit-learn', icon: 'logos/scikitlearn-logo.png' }, 
+  { id: 'git', name: 'Git', icon: 'logos/git-logo.png' },
+  { id: 'docker', name: 'Docker', icon: 'logos/docker-logo.png' },
+  { id: 'matlab', name: 'MATLAB', icon: 'logos/matlab-logo.png' },
+  { id: 'sql', name: 'SQL (MySQL)', icon: 'logos/mysql-logo.png' },
+  { id: 'postgres', name: 'PostgreSQL', icon: 'logos/postgres-logo.png' }, // Changed from MongoDB
+  { id: 'nlp', name: 'NLP (Hugging Face)', icon: 'logos/huggingface-logo.png' },
+  { id: 'cv', name: 'Computer Vision (OpenCV)', icon: 'logos/opencv-logo.png' },
+  { id: 'c', name: 'C', icon: 'logos/c-logo.png' },
+  { id: 'cpp', name: 'C++', icon: 'logos/cpp-logo.png' },
+  { id: 'flask', name: 'Flask', icon: 'logos/flask-logo.png' },
+  { id: 'keras', name: 'Keras', icon: 'logos/keras-logo.png' },
+  { id: 'java', name: 'Java', icon: 'logos/java-logo.png' },
+  { id: 'jenkins', name: 'Jenkins', icon: 'logos/jenkins-logo.png' },
+  { id: 'spring', name: 'Spring', icon: 'logos/spring-logo.png' },
 ];
 
 export const CONTACT_LINKS: ContactLink[] = [
@@ -76,28 +76,28 @@ export const CONTACT_LINKS: ContactLink[] = [
     id: 'linkedin', 
     name: 'LinkedIn', 
     url: `https://linkedin.com/in/${YOUR_LINKEDIN_USERNAME}`, 
-    icon: '/logos/linkedin-logo.png', 
+    icon: 'logos/linkedin-logo.png', 
     ariaLabel: `Connect with ${HERO_NAME} on LinkedIn` 
   },
   { 
     id: 'github', 
     name: 'GitHub', 
     url: `https://github.com/${YOUR_GITHUB_USERNAME}`, 
-    icon: '/logos/github-logo.png', 
+    icon: 'logos/github-logo.png', 
     ariaLabel: `View ${HERO_NAME}'s projects on GitHub` 
   },
   { 
     id: 'email', 
     name: 'Email', 
     url: `mailto:${YOUR_EMAIL}`, 
-    icon: '/logos/email-logo.png', 
+    icon: 'logos/email-logo.png', 
     ariaLabel: `Send an email to ${HERO_NAME}` 
   },
   { 
     id: 'leetcode', 
     name: 'LeetCode', 
     url: `https://leetcode.com/${YOUR_LEETCODE_USERNAME}`, 
-    icon: '/logos/leetcode-logo.png', 
+    icon: 'logos/leetcode-logo.png', 
     ariaLabel: `View ${HERO_NAME}'s LeetCode profile` 
   },
 ];
@@ -108,7 +108,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 'project-webdev',
     title: 'Web Development',
     description: 'Created the official website for QUBIT (Quantum Computing Club) to publish blogs, host events, and manage registrations. Built using ReactJS and optimized for traffic and reduced page load time by 29.8%.',
-    imageUrl: '/projects/webdev-project.png',
+    imageUrl: 'projects/webdev-project.png',
     tags: ['ReactJS', 'Web Development', 'Optimization', 'Qubit Club'],
     date: 'June. 2023',
     // repoUrl: `https://github.com/${YOUR_GITHUB_USERNAME}/qubit-website`, // Example
@@ -118,7 +118,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 'project-netsec',
     title: 'Network Security',
     description: 'Built a CNN-based system trained on the KDD dataset to detect network intrusions. Good performance with ADASYN for imbalanced class handling. Achieved improved accuracy and recall on minority attack types.',
-    imageUrl: '/projects/netsec-project.png',
+    imageUrl: 'projects/netsec-project.png',
     tags: ['CNN', 'Network Security', 'KDD Dataset', 'ADASYN', 'Machine Learning'],
     date: 'Feb. 2025',
     // repoUrl: `https://github.com/${YOUR_GITHUB_USERNAME}/network-intrusion-detection`, // Example
@@ -127,7 +127,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 'project-automation',
     title: 'Automation',
     description: 'Utilized YOLOv8 and a multi-modal strategy to classify aircraft as civilian, military, or UAV which can handle large-scale data and optimized latency by 20%. Aids military systems in real-time threat assessment.',
-    imageUrl: '/projects/aircraft-project.png',
+    imageUrl: 'projects/aircraft-project.png',
     tags: ['YOLOv8', 'Automation', 'Aircraft Classification', 'Multi-modal', 'Latency Optimization', 'AI'],
     date: 'Jan. 2024',
     // repoUrl: `https://github.com/${YOUR_GITHUB_USERNAME}/aircraft-classification`, // Example

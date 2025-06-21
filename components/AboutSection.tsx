@@ -18,7 +18,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ id }) => {
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
         <div className="md:w-1/3 animate-slide-in-left">
           <img
-            src="public/logos/karthik.png" // Changed image source here
+            src="karthik.png" // Changed image source here
             alt={`${HERO_NAME} Profile`}
             className="rounded-lg shadow-2xl w-full max-w-xs sm:max-w-sm mx-auto object-contain aspect-square border-4 border-primary/30"
           />
