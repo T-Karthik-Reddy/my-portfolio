@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "declaration": false,
+    "declarationMap": false,
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -24,6 +26,6 @@
       "@/*": ["./src/*"] // Example path alias if you decide to use src folder
     }
   },
-  "include": ["./**/*.ts", "./**/*.tsx", "vite.config.ts", "tailwind.config.js", "postcss.config.js"], // Adjusted to include root config files
+  "include": ["./**/*.ts", "./**/*.tsx"], // Adjusted to include root config files
   "references": [{ "path": "./tsconfig.node.json" }]
 }
