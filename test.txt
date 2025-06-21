@@ -1,0 +1,5 @@
+export const YOUR_NAME = "T Karthik Reddy"; // Updated Name
+export const YOUR_EMAIL = "karthikreddytheepi@gmail.com"; // Generic placeholder email
+export const YOUR_LINKEDIN_USERNAME = "tkarthikreddy"; // Generic placeholder
+export const YOUR_GITHUB_USERNAME = "T-Karthik-Reddy"; // Generic placeholder
+export const YOUR_LEETCODE_USERNAME = "tkarthikreddy"; // Generic placeholder for LeetCode
