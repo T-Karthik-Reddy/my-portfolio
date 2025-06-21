@@ -136,7 +136,7 @@ export const PROJECTS_DATA: Project[] = [
   {id: 'project-nrsc-satellite',
    title: 'Satellite Image Processing & Vegetation Classification',
    description: 'Developing 3D CNN and LSTM approach for classifying satellite imagery to identify and monitor vegetation changes for government applications at the National Remote Sensing Centre (NRSC).',
-   imageUrl: 'projects/nrsc.png',
+   imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/nrsc.png',
    tags: ['Satellite Imagery Processing', 'Speckle Noise Techniques','3D CNN + LSTM'],
    date: 'Ongoing',
   },
