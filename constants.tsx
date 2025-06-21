@@ -44,32 +44,32 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const ALL_SKILLS: Skill[] = [
-  { id: 'python', name: 'Python', icon: 'logos/python-logo.png' },
-  { id: 'javascript', name: 'JavaScript', icon: 'logos/javascript-logo.png' },
-  { id: 'react', name: 'React', icon: 'logos/react-logo.png' },
-  { id: 'nodejs', name: 'Node.js', icon: 'logos/nodejs-logo.png' },
-  { id: 'html5', name: 'HTML5', icon: 'logos/html-logo.png' },
-  { id: 'css3', name: 'CSS3', icon: 'logos/css-logo.png' },
+  { id: 'python', name: 'Python', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/python-logo.png' },
+  { id: 'javascript', name: 'JavaScript', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/javascript-logo.png' },
+  { id: 'react', name: 'React', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/react-logo.png' },
+  { id: 'nodejs', name: 'Node.js', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/nodejs-logo.png' },
+  { id: 'html5', name: 'HTML5', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/html-logo.png' },
+  { id: 'css3', name: 'CSS3', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/css-logo.png' },
   // Assuming user will add tailwind-logo.png to public/logos/
-  { id: 'tailwindcss', name: 'Tailwind CSS', icon: 'logos/tailwind-logo.png' }, 
-  { id: 'tensorflow', name: 'TensorFlow', icon: 'logos/tensorflow-logo.png' },
-  { id: 'pytorch', name: 'PyTorch', icon: 'logos/pytorch-logo.png' },
+  { id: 'tailwindcss', name: 'Tailwind CSS', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/tailwind-logo.png' }, 
+  { id: 'tensorflow', name: 'TensorFlow', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/tensorflow-logo.png' },
+  { id: 'pytorch', name: 'PyTorch', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/pytorch-logo.png' },
   // Assuming user will add scikitlearn-logo.png to public/logos/
-  { id: 'scikitlearn', name: 'Scikit-learn', icon: 'logos/scikitlearn-logo.png' }, 
-  { id: 'git', name: 'Git', icon: 'logos/git-logo.png' },
-  { id: 'docker', name: 'Docker', icon: 'logos/docker-logo.png' },
-  { id: 'matlab', name: 'MATLAB', icon: 'logos/matlab-logo.png' },
-  { id: 'sql', name: 'SQL (MySQL)', icon: 'logos/mysql-logo.png' },
-  { id: 'postgres', name: 'PostgreSQL', icon: 'logos/postgres-logo.png' }, // Changed from MongoDB
-  { id: 'nlp', name: 'NLP (Hugging Face)', icon: 'logos/huggingface-logo.png' },
-  { id: 'cv', name: 'Computer Vision (OpenCV)', icon: 'logos/opencv-logo.png' },
-  { id: 'c', name: 'C', icon: 'logos/c-logo.png' },
-  { id: 'cpp', name: 'C++', icon: 'logos/cpp-logo.png' },
-  { id: 'flask', name: 'Flask', icon: 'logos/flask-logo.png' },
-  { id: 'keras', name: 'Keras', icon: 'logos/keras-logo.png' },
-  { id: 'java', name: 'Java', icon: 'logos/java-logo.png' },
-  { id: 'jenkins', name: 'Jenkins', icon: 'logos/jenkins-logo.png' },
-  { id: 'spring', name: 'Spring', icon: 'logos/spring-logo.png' },
+  { id: 'scikitlearn', name: 'Scikit-learn', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/scikitlearn-logo.png' }, 
+  { id: 'git', name: 'Git', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/git-logo.png' },
+  { id: 'docker', name: 'Docker', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/docker-logo.png' },
+  { id: 'matlab', name: 'MATLAB', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/matlab-logo.png' },
+  { id: 'sql', name: 'SQL (MySQL)', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/mysql-logo.png' },
+  { id: 'postgres', name: 'PostgreSQL', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/postgres-logo.png' }, // Changed from MongoDB
+  { id: 'nlp', name: 'NLP (Hugging Face)', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/huggingface-logo.png' },
+  { id: 'cv', name: 'Computer Vision (OpenCV)', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/opencv-logo.png' },
+  { id: 'c', name: 'C', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/c-logo.png' },
+  { id: 'cpp', name: 'C++', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/cpp-logo.png' },
+  { id: 'flask', name: 'Flask', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/flask-logo.png' },
+  { id: 'keras', name: 'Keras', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/keras-logo.png' },
+  { id: 'java', name: 'Java', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/java-logo.png' },
+  { id: 'jenkins', name: 'Jenkins', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/jenkins-logo.png' },
+  { id: 'spring', name: 'Spring', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/spring-logo.png' },
 ];
 
 export const CONTACT_LINKS: ContactLink[] = [
@@ -77,28 +77,28 @@ export const CONTACT_LINKS: ContactLink[] = [
     id: 'linkedin', 
     name: 'LinkedIn', 
     url: `https://linkedin.com/in/${YOUR_LINKEDIN_USERNAME}`, 
-    icon: 'logos/linkedin-logo.png', 
+    icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/linkedin-logo.png', 
     ariaLabel: `Connect with ${HERO_NAME} on LinkedIn` 
   },
   { 
     id: 'github', 
     name: 'GitHub', 
     url: `https://github.com/${YOUR_GITHUB_USERNAME}`, 
-    icon: 'logos/github-logo.png', 
+    icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/github-logo.png', 
     ariaLabel: `View ${HERO_NAME}'s projects on GitHub` 
   },
   { 
     id: 'email', 
     name: 'Email', 
     url: `mailto:${YOUR_EMAIL}`, 
-    icon: 'logos/email-logo.png', 
+    icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/email-logo.png', 
     ariaLabel: `Send an email to ${HERO_NAME}` 
   },
   { 
     id: 'leetcode', 
     name: 'LeetCode', 
     url: `https://leetcode.com/${YOUR_LEETCODE_USERNAME}`, 
-    icon: 'logos/leetcode-logo.png', 
+    icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/leetcode-logo.png', 
     ariaLabel: `View ${HERO_NAME}'s LeetCode profile` 
   },
 ];
@@ -109,7 +109,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 'project-webdev',
     title: 'Web Development',
     description: 'Created the official website for QUBIT (Quantum Computing Club) to publish blogs, host events, and manage registrations. Built using ReactJS and optimized for traffic and reduced page load time by 29.8%.',
-    imageUrl: 'projects/webdev-project.png',
+    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/webdev-project.png',
     tags: ['ReactJS', 'Web Development', 'Optimization', 'Qubit Club'],
     date: 'June. 2023',
     // repoUrl: `https://github.com/${YOUR_GITHUB_USERNAME}/qubit-website`, // Example
@@ -119,7 +119,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 'project-netsec',
     title: 'Network Security',
     description: 'Built a CNN-based system trained on the KDD dataset to detect network intrusions. Good performance with ADASYN for imbalanced class handling. Achieved improved accuracy and recall on minority attack types.',
-    imageUrl: 'projects/netsec-project.png',
+    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/netsec-project.png',
     tags: ['CNN', 'Network Security', 'KDD Dataset', 'ADASYN', 'Machine Learning'],
     date: 'Feb. 2025',
     // repoUrl: `https://github.com/${YOUR_GITHUB_USERNAME}/network-intrusion-detection`, // Example
@@ -128,7 +128,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 'project-automation',
     title: 'Automation',
     description: 'Utilized YOLOv8 and a multi-modal strategy to classify aircraft as civilian, military, or UAV which can handle large-scale data and optimized latency by 20%. Aids military systems in real-time threat assessment.',
-    imageUrl: 'projects/aircraft-project.png',
+    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/aircraft-project.png',
     tags: ['YOLOv8', 'Automation', 'Aircraft Classification', 'Multi-modal', 'Latency Optimization', 'AI'],
     date: 'Jan. 2024',
     // repoUrl: `https://github.com/${YOUR_GITHUB_USERNAME}/aircraft-classification`, // Example
