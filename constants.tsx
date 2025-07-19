@@ -106,6 +106,16 @@ export const CONTACT_LINKS: ContactLink[] = [
 
 export const PROJECTS_DATA: Project[] = [
   {
+    id: 'project-web3-game',
+    title: 'Online PVP Game Platform with Crypto Rewards',
+    description: 'Developed a real-time PVP gaming platform using WebSockets for fast-paced gameplay. Integrated with the Ethereum blockchain via Solidity smart contracts and MetaMask for secure, automated crypto rewards for winners.',
+    // Note: Ensure 'web3-project.png' is in your `public/projects/` folder.
+    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/web3-project.png',
+    tags: ['Solidity', 'Smart Contracts', 'WebSockets', 'GoLang'],
+    date: 'June. 2025', // Placeholder date, feel free to change
+    // liveUrl: '#', // Add live demo URL if available
+  },
+  {
     id: 'project-webdev',
     title: 'Web Development',
     description: 'Created the official website for QUBIT (Quantum Computing Club) to publish blogs, host events, and manage registrations. Built using ReactJS and optimized for traffic and reduced page load time by 29.8%.',
