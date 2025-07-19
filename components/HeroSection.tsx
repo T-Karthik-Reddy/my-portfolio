@@ -84,7 +84,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ id }) => {
             </div>
             <div className="flex items-center">
               <CpuChipIcon className="w-8 h-8 sm:w-10 sm:h-10 mr-3 text-accent" />
-              <span>AI Specialist</span>
+              <span>AI Enthusiast</span>
             </div>
           </div>
         </div>
