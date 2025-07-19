@@ -9,10 +9,10 @@ interface AboutSectionProps {
 
 const AboutSection: React.FC<AboutSectionProps> = ({ id }) => {
   return (
-    <SectionWrapper 
-      id={id} 
+    <SectionWrapper
+      id={id}
       title="About Karthik" // Changed title here
-      className="bg-neutral" 
+      className="bg-neutral"
       titleClassName="text-textBase"
     >
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
@@ -25,24 +25,22 @@ const AboutSection: React.FC<AboutSectionProps> = ({ id }) => {
         </div>
         <div className="md:w-2/3 text-textBase/90 text-lg space-y-5 animate-fade-in-up animation-delay-200">
           <p>
-            Hi there! I'm a passionate Computer Science and Engineering student with a strong
-            interest in the ever-evolving fields of Artificial Intelligence and Web Development. I thrive on
-            solving complex problems and building innovative solutions that can make a real impact.
+            Hello ! I'm a CS undergrad - mostly running on caffeine, curiosity, and chaos.
+            I'm super into Artificial Intelligence and Web Development (basically trying to make computers smarter and websites cooler).
           </p>
+
           <p>
-            In AI, I'm particularly fascinated by machine learning, natural language processing,
-            and computer vision. I enjoy exploring how intelligent systems can learn from data to perform
-            tasks that traditionally require human intellect.
+            In AI, I really enjoy playing with machine learning, computer vision, and natural language processing - teaching machines to see, talk, and think (sometimes better than humans, no offense).
           </p>
+
           <p>
-            On the web development front, I love crafting responsive, user-friendly interfaces and
-            robust backend systems. I'm proficient with modern frameworks like React and Node.js, and always
-            eager to learn new technologies to enhance my skillset.
+            On the web side, I love making websites that don’t crash when you open them 😎. I work with React and Node.js and get excited every time I learn a new tech (and then immediately forget half of it after 2 days).
           </p>
+
           <p>
-            I'm a firm believer in continuous learning and collaboration. I'm always looking for
-            opportunities to contribute to exciting projects and grow both personally and professionally.
+            I’m a big fan of learning new things, especially if they involve late nights, debugging nightmares, and Stack Overflow therapy sessions. Always open to working on cool projects — especially if there's free food or good Wi-Fi.
           </p>
+
           <a
             href={YOUR_RESUME_PATH}
             target="_blank"
