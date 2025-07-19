@@ -38,7 +38,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ id }) => {
           </p>
 
           <p>
-            I’m a big fan of learning new things, especially if they involve late nights, debugging nightmares, and Stack Overflow therapy sessions. Always open to working on cool projects — especially if there's free food or good Wi-Fi.
+            I’m a big fan of learning new things, especially if they involve late nights, debugging nightmares, and Stack Overflow therapy sessions. Always open to working on cool projects.
           </p>
 
           <a
