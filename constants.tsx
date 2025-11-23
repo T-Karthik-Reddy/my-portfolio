@@ -11,7 +11,7 @@ export const YOUR_LINKEDIN_USERNAME = "tkarthikreddy"; // Generic placeholder
 export const YOUR_GITHUB_USERNAME = "T-Karthik-Reddy"; // Generic placeholder
 export const YOUR_LEETCODE_USERNAME = "tkarthikreddy"; // Generic placeholder for LeetCode
 // Ensure this resume path is correct and the file exists in the public folder
-export const YOUR_RESUME_PATH = "t_karthik_reddy_resume.pdf"; 
+export const YOUR_RESUME_PATH = "t_karthik_reddy_resume.pdf";
 
 export const NAVBAR_LOGO_TEXT = "KR";
 export const SITE_TITLE = `${YOUR_NAME} | AI & Web Portfolio`;
@@ -51,11 +51,11 @@ export const ALL_SKILLS: Skill[] = [
   { id: 'html5', name: 'HTML5', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/html-logo.png' },
   { id: 'css3', name: 'CSS3', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/css-logo.png' },
   // Assuming user will add tailwind-logo.png to public/logos/
-  { id: 'tailwindcss', name: 'Tailwind CSS', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/tailwind-logo.png' }, 
+  { id: 'tailwindcss', name: 'Tailwind CSS', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/tailwind-logo.png' },
   { id: 'tensorflow', name: 'TensorFlow', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/tensorflow-logo.png' },
   { id: 'pytorch', name: 'PyTorch', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/pytorch-logo.png' },
   // Assuming user will add scikitlearn-logo.png to public/logos/
-  { id: 'scikitlearn', name: 'Scikit-learn', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/scikitlearn-logo.png' }, 
+  { id: 'scikitlearn', name: 'Scikit-learn', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/scikitlearn-logo.png' },
   { id: 'git', name: 'Git', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/git-logo.png' },
   { id: 'docker', name: 'Docker', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/docker-logo.png' },
   { id: 'matlab', name: 'MATLAB', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/matlab-logo.png' },
@@ -73,38 +73,46 @@ export const ALL_SKILLS: Skill[] = [
 ];
 
 export const CONTACT_LINKS: ContactLink[] = [
-  { 
-    id: 'linkedin', 
-    name: 'LinkedIn', 
-    url: `https://linkedin.com/in/${YOUR_LINKEDIN_USERNAME}`, 
-    icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/linkedin-logo.png', 
-    ariaLabel: `Connect with ${HERO_NAME} on LinkedIn` 
+  {
+    id: 'linkedin',
+    name: 'LinkedIn',
+    url: `https://linkedin.com/in/${YOUR_LINKEDIN_USERNAME}`,
+    icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/linkedin-logo.png',
+    ariaLabel: `Connect with ${HERO_NAME} on LinkedIn`
   },
-  { 
-    id: 'github', 
-    name: 'GitHub', 
-    url: `https://github.com/${YOUR_GITHUB_USERNAME}`, 
-    icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/github-logo.png', 
-    ariaLabel: `View ${HERO_NAME}'s projects on GitHub` 
+  {
+    id: 'github',
+    name: 'GitHub',
+    url: `https://github.com/${YOUR_GITHUB_USERNAME}`,
+    icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/github-logo.png',
+    ariaLabel: `View ${HERO_NAME}'s projects on GitHub`
   },
-  { 
-    id: 'email', 
-    name: 'Email', 
-    url: `mailto:${YOUR_EMAIL}`, 
-    icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/email-logo.png', 
-    ariaLabel: `Send an email to ${HERO_NAME}` 
+  {
+    id: 'email',
+    name: 'Email',
+    url: `mailto:${YOUR_EMAIL}`,
+    icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/email-logo.png',
+    ariaLabel: `Send an email to ${HERO_NAME}`
   },
-  { 
-    id: 'leetcode', 
-    name: 'LeetCode', 
-    url: `https://leetcode.com/${YOUR_LEETCODE_USERNAME}`, 
-    icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/leetcode-logo.png', 
-    ariaLabel: `View ${HERO_NAME}'s LeetCode profile` 
+  {
+    id: 'leetcode',
+    name: 'LeetCode',
+    url: `https://leetcode.com/${YOUR_LEETCODE_USERNAME}`,
+    icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/leetcode-logo.png',
+    ariaLabel: `View ${HERO_NAME}'s LeetCode profile`
   },
 ];
 
 
 export const PROJECTS_DATA: Project[] = [
+  {
+    id: 'project-uix-builder',
+    title: 'UIX Builder',
+    description: 'LLM powered with wire frame geneartor with crazy load of features - wiining pojetc in techolution hackathon',
+    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/uix-builder.png',
+    tags: ['LLM', 'Wireframe Generator', 'Hackathon Winner', 'AI'],
+    date: 'Recent',
+  },
   {
     id: 'project-web3-game',
     title: 'Online PVP Game Platform with Crypto Rewards',
@@ -143,11 +151,12 @@ export const PROJECTS_DATA: Project[] = [
     date: 'Jan. 2024',
     // repoUrl: `https://github.com/${YOUR_GITHUB_USERNAME}/aircraft-classification`, // Example
   },
-  {id: 'project-nrsc-satellite',
-   title: 'Satellite Image Processing & Vegetation Classification',
-   description: 'Developing 3D CNN and LSTM approach for classifying satellite imagery to identify and monitor vegetation changes for government applications at the National Remote Sensing Centre (NRSC).',
-   imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/nrsc.png',
-   tags: ['Satellite Imagery Processing', 'Speckle Noise Techniques','3D CNN + LSTM'],
-   date: 'Ongoing',
+  {
+    id: 'project-nrsc-satellite',
+    title: 'Satellite Image Processing & Vegetation Classification',
+    description: 'Developing 3D CNN and LSTM approach for classifying satellite imagery to identify and monitor vegetation changes for government applications at the National Remote Sensing Centre (NRSC).',
+    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/nrsc.png',
+    tags: ['Satellite Imagery Processing', 'Speckle Noise Techniques', '3D CNN + LSTM'],
+    date: 'Ongoing',
   },
 ];
