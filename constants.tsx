@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavItem, Skill, Project, ContactLink } from './types';
+import { NavItem, Skill, Project, ContactLink, Experience } from './types';
 // Import FontAwesome icons that are still used (e.g., for resume download, heart icon)
 import { faDownload, faHeart } from '@fortawesome/free-solid-svg-icons';
 
@@ -39,6 +39,7 @@ export const NAV_ITEMS: NavItem[] = [
   { id: 'home', label: 'Home', href: '#home' },
   { id: 'about', label: 'About', href: '#about' },
   { id: 'skills', label: 'Skills', href: '#skills' },
+  { id: 'experience', label: 'Experience', href: '#experience' },
   { id: 'projects', label: 'Projects', href: '#projects' },
   { id: 'contact', label: 'Contact', href: '#contact' },
 ];
@@ -100,6 +101,28 @@ export const CONTACT_LINKS: ContactLink[] = [
     url: `https://leetcode.com/${YOUR_LEETCODE_USERNAME}`,
     icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/leetcode-logo.png',
     ariaLabel: `View ${HERO_NAME}'s LeetCode profile`
+  },
+];
+
+
+export const EXPERIENCE_DATA: Experience[] = [
+  {
+    id: 'techolution-intern',
+    role: 'GEN AI Intern',
+    company: 'Techolution',
+    duration: 'Sept 2025 - Present',
+    description: 'Bridging academic learning with industry problem solving skills.',
+  },
+  {
+    id: 'nrsc-intern',
+    role: 'ML Intern',
+    company: 'NRSC - ISRO',
+    duration: 'June 2025 - Aug 2025',
+    description: 'Worked in 3d CNNs and LSTM and developing end to end ML pipeline to help crop prediction using real time satellite TIFF Images and : SAR Image Despeckling using Classical and Deep Learning Approaches.',
+    images: [
+      '/my-portfolio/experience/nrsc-1.jpg',
+      '/my-portfolio/experience/nrsc-2.jpg'
+    ]
   },
 ];
 

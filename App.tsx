@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
+import ExperienceSection from './components/ExperienceSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -47,6 +48,7 @@ const App: React.FC = () => {
         <HeroSection id="home" />
         <AboutSection id="about" />
         <SkillsSection id="skills" />
+        <ExperienceSection id="experience" />
         <ProjectsSection id="projects" />
         <ContactSection id="contact" />
       </main>

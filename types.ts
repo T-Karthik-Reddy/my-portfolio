@@ -27,7 +27,7 @@ export interface Project {
 }
 
 export interface ContactLink {
-  id:string;
+  id: string;
   name: string;
   url: string;
   icon: string; // Changed to string for image path
@@ -39,6 +39,16 @@ export interface ChatMessage {
   text: string;
   sender: 'user' | 'bot' | 'system';
   timestamp: Date;
+}
+
+export interface Experience {
+  id: string;
+  role: string;
+  company: string;
+  duration: string;
+  description: string;
+  logo?: string;
+  images?: string[];
 }
 
 // Interface for FontAwesome specific icons if needed elsewhere directly

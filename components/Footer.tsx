@@ -1,10 +1,9 @@
 import React from 'react';
-import { CONTACT_LINKS, FOOTER_NAME, faHeart } from '../constants'; // Import faHeart
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Ensure this is installed
+import { CONTACT_LINKS, FOOTER_NAME } from '../constants';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  const socialLinks = CONTACT_LINKS.filter(link => 
+  const socialLinks = CONTACT_LINKS.filter(link =>
     ['linkedin', 'github', 'leetcode', 'email'].includes(link.id) // Added email, adjust as needed
   );
 
@@ -29,9 +28,7 @@ const Footer: React.FC = () => {
         <p className="text-sm mb-2 text-textBase">
           &copy; {currentYear} {FOOTER_NAME}. All rights reserved.
         </p>
-        <p className="text-xs text-textBase/70">
-          Crafted with <FontAwesomeIcon icon={faHeart} className="text-accent" /> using React, TypeScript, and Tailwind CSS.
-        </p>
+
       </div>
     </footer>
   );
