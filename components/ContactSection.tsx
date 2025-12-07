@@ -36,7 +36,7 @@ const ContactSection: React.FC<{ id: string }> = ({ id }) => {
 
           <a
             href={`mailto:${YOUR_EMAIL}`}
-            onClick={(e) => {
+            onClick={() => {
               window.location.href = `mailto:${YOUR_EMAIL}`;
             }}
             className="inline-block px-12 py-5 bg-primary text-white font-serif font-bold text-xl tracking-wider hover:bg-primary-dark transition-all duration-500 shadow-[0_0_30px_rgba(184,134,11,0.2)] hover:shadow-[0_0_50px_rgba(184,134,11,0.4)] cursor-pointer"
