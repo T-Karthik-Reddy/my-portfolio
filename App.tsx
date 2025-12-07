@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-import AboutSection from './components/AboutSection';
+import AboutSectionVogue from './components/AboutSectionVogue';
 import SkillsSection from './components/SkillsSection';
 import ExperienceSection from './components/ExperienceSection';
 import ProjectsSection from './components/ProjectsSection';
@@ -46,7 +46,7 @@ const App: React.FC = () => {
       <Navbar navItems={NAV_ITEMS} activeSection={activeSection} />
       <main className="flex-grow">
         <HeroSection id="home" />
-        <AboutSection id="about" />
+        <AboutSectionVogue id="about" />
         <SkillsSection id="skills" />
         <ExperienceSection id="experience" />
         <ProjectsSection id="projects" />

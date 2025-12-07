@@ -1,130 +1,81 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { CONTACT_LINKS, HERO_NAME, ComputerDesktopIcon, CpuChipIcon } from '../constants';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { YOUR_RESUME_PATH } from '../constants';
 
-interface HeroSectionProps {
-  id: string;
-}
+const HeroSection: React.FC<{ id: string }> = ({ id }) => {
+    return (
+        <section id={id} className="relative h-screen w-full flex flex-col items-center justify-start overflow-hidden bg-background">
 
-const CHARS = '01'; // Characters for binary rain
-const COLUMN_WIDTH = 18; // px, approx width of a character + spacing
-const MIN_SPEED = 5; // seconds for full fall
-const MAX_SPEED = 12; // seconds for full fall
-
-const HeroSection: React.FC<HeroSectionProps> = ({ id }) => {
-  const [binaryColumns, setBinaryColumns] = useState<Array<{ id: number; content: string; left: number; duration: number; delay: number }>>([]);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    const screenWidth = containerRef.current.offsetWidth;
-    const screenHeight = containerRef.current.offsetHeight;
-    const numColumns = Math.floor(screenWidth / COLUMN_WIDTH);
-    // Approximate chars per column based on 0.9em line height for 1em font size (COLUMN_WIDTH is effectively font size here)
-    const charsPerColumn = Math.floor(screenHeight / (COLUMN_WIDTH * 0.9));
-
-
-    const newColumns = Array.from({ length: numColumns }).map((_, i) => {
-      let columnContent = '';
-      for (let j = 0; j < charsPerColumn; j++) {
-        columnContent += CHARS[Math.floor(Math.random() * CHARS.length)] + (j < charsPerColumn - 1 ? '\n' : '');
-      }
-      return {
-        id: i,
-        content: columnContent,
-        left: i * COLUMN_WIDTH,
-        duration: Math.random() * (MAX_SPEED - MIN_SPEED) + MIN_SPEED,
-        delay: Math.random() * MAX_SPEED * 0.5, // Stagger start times
-      };
-    });
-    setBinaryColumns(newColumns);
-  }, []); // Re-calculate on resize might be too much, but consider for resize listener if dynamic layout changes drastically
-
-  const socialIconsToShow = CONTACT_LINKS.filter(link => ['github', 'linkedin', 'leetcode'].includes(link.id));
-
-
-  return (
-    <section
-      ref={containerRef}
-      id={id}
-      className="relative h-screen flex flex-col items-center justify-center text-center text-textBase overflow-hidden bg-background p-6"
-    >
-      {/* Binary Rain Background - color is handled by CSS in index.css */}
-      <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
-        {binaryColumns.map(col => (
-          <div
-            key={col.id}
-            className="binary-rain-column animate-binary-rain-fall" // Animation defined in tailwind.config.js and index.css
-            style={{
-              left: `${col.left}px`,
-              fontSize: `${COLUMN_WIDTH * 0.8}px`, // Adjust character size relative to column width
-              lineHeight: `${COLUMN_WIDTH * 0.9}px`, // Adjust line height
-              animationDuration: `${col.duration}s`,
-              animationDelay: `${col.delay}s`,
-              width: `${COLUMN_WIDTH}px`,
-            }}
-          >
-            {col.content.split('\n').map((charLine, index) => (
-              <span key={index} style={{ opacity: Math.random() * 0.5 + 0.5 }}>{charLine || ' '}</span>
-            ))}
-          </div>
-        ))}
-      </div>
-
-      <div className="relative z-10 animate-fade-in-up">
-        {/* Text shadow for better readability over busy background */}
-        <div style={{ textShadow: '0px 0px 10px rgba(21, 18, 26, 0.9), 0px 0px 3px rgba(21, 18, 26, 1)' }}>
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-6 text-textBase">
-            {HERO_NAME}
-          </h1>
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-6 text-xl sm:text-2xl md:text-3xl mb-10 text-textBase">
-            <div className="flex items-center">
-              <ComputerDesktopIcon className="w-8 h-8 sm:w-10 sm:h-10 mr-3 text-primary" />
-              <span>Web Developer</span>
+            {/* Full Screen Background Image */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="vogue.png"
+                    alt="Karthik Vogue Cover"
+                    className="w-full h-full object-cover grayscale contrast-125"
+                />
+                {/* Overlay Gradient for Text Readability */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40"></div>
             </div>
-            <div className="flex items-center">
-              <CpuChipIcon className="w-8 h-8 sm:w-10 sm:h-10 mr-3 text-accent" />
-              <span>AI Enthusiast</span>
-            </div>
-          </div>
-        </div>
 
-        <div className="flex justify-center space-x-6 mb-12">
-          {socialIconsToShow.map(link => (
-            <a
-              key={link.id}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={link.ariaLabel || link.name}
-              title={link.name}
-              className="text-textBase hover:text-primary transition-colors duration-300 transform hover:scale-125"
+            {/* MASTHEAD - The User's Name as the Vogue Logo */}
+            <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="relative z-20 text-center w-full pt-24"
             >
-              <img src={link.icon} alt={link.name} className="w-8 h-8 sm:w-9 sm:h-9 object-contain" />
-            </a>
-          ))}
-        </div>
+                <h1 className="font-serif font-bold text-[15vw] md:text-[18vw] leading-[0.8] text-primary tracking-tighter mix-blend-difference opacity-90">
+                    KARTHIK
+                </h1>
+            </motion.div>
 
-        <div>
-          <a
-            href="#projects"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="bg-primary hover:bg-primary-dark text-background font-semibold py-3.5 px-10 rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300 text-lg"
-          >
-            View My Work
-          </a>
-        </div>
-      </div>
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-textBase opacity-50 hover:opacity-80 transition-opacity">
-          <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-        </svg>
-      </div>
-    </section>
-  );
+            {/* Floating Headlines (Cover Lines) - Positioned Absolutely over the image */}
+            <div className="absolute inset-0 z-20 pointer-events-none">
+                <div className="container mx-auto h-full relative">
+
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.8, duration: 0.8 }}
+                        className="absolute top-1/3 left-6 md:left-0 text-left pointer-events-auto mt-12"
+                    >
+                        <h2 className="font-serif text-4xl md:text-6xl text-primary italic leading-tight drop-shadow-lg">
+                            The <br /> <span className="text-white not-italic font-bold">Future</span> <br /> of AI
+                        </h2>
+                        <p className="mt-4 text-sm font-sans text-white/90 max-w-[200px] font-medium drop-shadow-md">
+                            How one developer is bridging the gap between code and creativity.
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 1, duration: 0.8 }}
+                        className="absolute bottom-32 right-6 md:right-0 text-right pointer-events-auto"
+                    >
+                        <h3 className="font-serif text-3xl md:text-5xl text-white font-bold drop-shadow-lg">
+                            Web <br /> <span className="text-primary italic">Revolution</span>
+                        </h3>
+                        <p className="mt-4 text-sm font-sans text-white/90 ml-auto max-w-[200px] font-medium drop-shadow-md">
+                            Mastering the art of digital experiences.
+                        </p>
+                    </motion.div>
+
+                    {/* CTA Button */}
+                    <motion.a
+                        href={YOUR_RESUME_PATH}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.05 }}
+                        className="absolute bottom-12 left-6 md:left-0 pointer-events-auto bg-primary text-white px-8 py-4 rounded-full font-bold tracking-widest text-xs uppercase shadow-xl hover:bg-primary-dark transition-colors"
+                    >
+                        Read The Resume
+                    </motion.a>
+                </div>
+            </div>
+
+        </section>
+    );
 };
 
 export default HeroSection;

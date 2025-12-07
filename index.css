@@ -1,68 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Binary Rain Background Styles */
-.binary-rain-column {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  font-family: 'monospace', monospace;
-  color: theme('colors.accent.DEFAULT'); /* Muted Magenta */
-  /* font-size and line-height are set dynamically in HeroSection.tsx */
-  user-select: none;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  text-shadow: 0 0 5px theme('colors.accent.light'), 0 0 10px theme('colors.accent.dark');
-  opacity: 0; /* Initial opacity, animation handles fade in */
-  will-change: transform, opacity;
+@layer base {
+  body {
+    @apply bg-background text-textBase font-sans antialiased selection:bg-primary/30 selection:text-black;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
 }
 
-/* Custom scrollbar for chat messages */
-.chat-messages::-webkit-scrollbar {
-  width: 6px;
-}
-.chat-messages::-webkit-scrollbar-track {
-  background: theme('colors.neutral.darker');
-  border-radius: 10px;
-}
-.chat-messages::-webkit-scrollbar-thumb {
-  background: theme('colors.primary.dark');
-  border-radius: 10px;
-}
-.chat-messages::-webkit-scrollbar-thumb:hover {
-  background: theme('colors.primary.DEFAULT');
+@layer utilities {
+  .vogue-filter {
+    @apply grayscale contrast-125 transition-all duration-700 ease-out;
+  }
+  
+  .vogue-filter:hover {
+    @apply grayscale-0 contrast-100 scale-105;
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    color: transparent;
+  }
+
+  .text-stroke-gold {
+    -webkit-text-stroke: 1px rgba(212, 175, 55, 0.3);
+    color: transparent;
+  }
 }
 
-/* Custom Animation Delays - Tailwind JIT can also handle these with animate-delay-[time]ms syntax */
-/* These are kept for reference or if specific non-standard delays are needed widely */
-.animation-delay-50 { animation-delay: 0.05s !important; }
-.animation-delay-100 { animation-delay: 0.1s !important; }
-.animation-delay-150 { animation-delay: 0.15s !important; }
-.animation-delay-200 { animation-delay: 0.2s !important; }
-.animation-delay-250 { animation-delay: 0.25s !important; }
-.animation-delay-300 { animation-delay: 0.3s !important; }
-.animation-delay-350 { animation-delay: 0.35s !important; }
-.animation-delay-400 { animation-delay: 0.4s !important; }
-.animation-delay-450 { animation-delay: 0.45s !important; }
-.animation-delay-500 { animation-delay: 0.5s !important; }
-.animation-delay-600 { animation-delay: 0.6s !important; }
-.animation-delay-700 { animation-delay: 0.7s !important; }
-.animation-delay-800 { animation-delay: 0.8s !important; }
-.animation-delay-900 { animation-delay: 0.9s !important; }
-.animation-delay-1000 { animation-delay: 1s !important; }
-
-
-/* General body styling for new palette */
-body {
-  background-color: theme('colors.background');
-  color: theme('colors.textBase');
-  font-family: theme('fontFamily.sans'); /* Ensure Inter font is applied */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* Ensure html has scroll-smooth if not already set by class in index.html */
-html {
-  scroll-behavior: smooth;
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
 }

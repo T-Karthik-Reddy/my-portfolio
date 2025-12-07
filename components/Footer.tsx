@@ -1,34 +1,26 @@
 import React from 'react';
-import { CONTACT_LINKS, FOOTER_NAME } from '../constants';
+import { FOOTER_NAME } from '../constants';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  const socialLinks = CONTACT_LINKS.filter(link =>
-    ['linkedin', 'github', 'leetcode', 'email'].includes(link.id) // Added email, adjust as needed
-  );
 
   return (
-    <footer className="bg-neutral-darker text-textBase/70 py-12 animate-footer-fade-in">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="mb-6 flex justify-center space-x-6">
-          {socialLinks.map(link => (
-            <a
-              key={link.id}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={link.ariaLabel || link.name}
-              className="text-textBase/80 hover:text-primary transition-colors duration-300"
-              title={link.name}
-            >
-              <img src={link.icon} alt={link.name} className="w-6 h-6 object-contain" />
-            </a>
-          ))}
-        </div>
-        <p className="text-sm mb-2 text-textBase">
-          &copy; {currentYear} {FOOTER_NAME}. All rights reserved.
-        </p>
+    <footer className="bg-neutral py-12 border-t border-black/5">
+      <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
 
+        <div className="text-center md:text-left">
+          <p className="font-serif text-2xl text-textBase tracking-wider mb-1">{FOOTER_NAME}</p>
+          <p className="text-[10px] uppercase tracking-[0.2em] text-textBase/40">
+            Portfolio • Vol. 01
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center md:items-end">
+          <p className="text-textBase/40 text-xs font-light tracking-wide">
+            &copy; {currentYear} All Rights Reserved.
+          </p>
+
+        </div>
       </div>
     </footer>
   );

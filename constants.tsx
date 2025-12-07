@@ -18,6 +18,12 @@ export const SITE_TITLE = `${YOUR_NAME} | AI & Web Portfolio`;
 export const HERO_NAME = YOUR_NAME;
 export const FOOTER_NAME = YOUR_NAME;
 
+export const ABOUT_ME_DESCRIPTION = `
+  I am a full-stack developer who enjoys turning ideas into clean, simple, and usable products. I care both about how things work and how they look - building software that’s solid under the hood and pleasing on the screen.
+
+  Most of my learning comes from building, breaking, and fixing things. I’m especially interested in AI and modern web technologies and enjoy exploring how they can be used to create smart, practical tools. I believe good software comes from patience, attention to detail, and a constant desire to improve - one project at a time.
+`;
+
 // Export FontAwesome icons for use in components
 export { faDownload, faHeart };
 
@@ -71,6 +77,15 @@ export const ALL_SKILLS: Skill[] = [
   { id: 'java', name: 'Java', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/java-logo.png' },
   { id: 'jenkins', name: 'Jenkins', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/jenkins-logo.png' },
   { id: 'spring', name: 'Spring', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/spring-logo.png' },
+  { id: 'go', name: 'Go', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/go-logo.png' },
+  { id: 'solidity', name: 'Solidity', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/solidity-logo.png' },
+  { id: 'bash', name: 'Bash', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/bash-logo.png' },
+  { id: 'linux', name: 'Linux', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/linux-logo.png' },
+  { id: 'ansible', name: 'Ansible', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/ansible-logo.png' },
+  { id: 'kubernetes', name: 'Kubernetes', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/kubernetes-logo.png' },
+  { id: 'wireshark', name: 'Wireshark', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/wireshark-logo.png' },
+  { id: 'jira', name: 'Jira', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/jira-logo.png' },
+  { id: 'express', name: 'ExpressJS', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/express-logo.png' },
 ];
 
 export const CONTACT_LINKS: ContactLink[] = [
@@ -131,7 +146,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: 'project-uix-builder',
     title: 'UIX Builder',
-    description: 'LLM powered with wire frame geneartor with crazy load of features - wiining pojetc in techolution hackathon',
+    description: 'LLM powered with wire frame geneartor with crazy load of features - winning project in techolution hackathon',
     imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/uix-builder.png',
     tags: ['LLM', 'Wireframe Generator', 'Hackathon Winner', 'AI'],
     date: 'Recent',
@@ -149,7 +164,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: 'project-webdev',
     title: 'Web Development',
-    description: 'Created the official website for QUBIT (Quantum Computing Club) to publish blogs, host events, and manage registrations. Built using ReactJS and optimized for traffic and reduced page load time by 29.8%.',
+    description: 'Created the official website for QUBIT (Quantum Computing Club) to publish blogs, host events, and manage registrations.',
     imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/webdev-project.png',
     tags: ['ReactJS', 'Web Development', 'Optimization', 'Qubit Club'],
     date: 'June. 2023',

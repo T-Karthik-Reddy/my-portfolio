@@ -1,103 +1,63 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import SectionWrapper from './SectionWrapper';
 import { CONTACT_LINKS, YOUR_EMAIL } from '../constants';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCopy, faCheck, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-interface ContactSectionProps {
-  id: string;
-}
-
-const ContactSection: React.FC<ContactSectionProps> = ({ id }) => {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(YOUR_EMAIL);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
+const ContactSection: React.FC<{ id: string }> = ({ id }) => {
   return (
     <SectionWrapper
       id={id}
-      title="Get In Touch"
-      subtitle="Ready to start a project or just want to say hi? My inbox is open."
-      className="bg-neutral relative overflow-hidden"
-      titleClassName="text-textBase"
+      title=""
+      className="bg-background py-32 relative overflow-hidden"
     >
-      {/* Background Grid Pattern (CSS-in-JS for simplicity here, or could be in index.css) */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none"
-        style={{
-          backgroundImage: 'radial-gradient(#8E9AAF 1px, transparent 1px)',
-          backgroundSize: '30px 30px'
-        }}>
+      {/* Background Decorative Text */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-[0.03] select-none">
+        <span className="text-[25vw] font-serif font-bold text-primary whitespace-nowrap">
+          CONTACT
+        </span>
       </div>
 
-      <div className="max-w-4xl mx-auto relative z-10">
+      <div className="max-w-3xl mx-auto text-center relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <p className="text-primary text-sm tracking-[0.3em] uppercase mb-6">Inquiries</p>
+          <h2 className="font-serif text-6xl md:text-8xl text-textBase mb-12">
+            Let's <span className="italic text-textBase/40">Talk</span>
+          </h2>
 
-        {/* Email Command Bar */}
-        <div className="bg-background/80 backdrop-blur-md border border-primary/20 rounded-2xl p-2 sm:p-4 mb-12 shadow-2xl flex flex-col sm:flex-row items-center gap-4 animate-fade-in-up">
-          <div className="flex-grow w-full sm:w-auto bg-neutral-darker/50 rounded-xl px-4 py-3 flex items-center border border-white/5">
-            <span className="text-accent mr-3 font-mono hidden sm:inline">{'>'}</span>
-            <input
-              type="text"
-              readOnly
-              value={YOUR_EMAIL}
-              className="bg-transparent border-none outline-none text-textBase/90 w-full font-mono text-sm sm:text-base"
-            />
+          <p className="text-xl font-light text-textBase/80 mb-16 leading-relaxed max-w-xl mx-auto">
+            Available for ML and Computer Architecture research.
+            Let's create something timeless.
+          </p>
+
+          <a
+            href={`mailto:${YOUR_EMAIL}`}
+            onClick={(e) => {
+              window.location.href = `mailto:${YOUR_EMAIL}`;
+            }}
+            className="inline-block px-12 py-5 bg-primary text-white font-serif font-bold text-xl tracking-wider hover:bg-primary-dark transition-all duration-500 shadow-[0_0_30px_rgba(184,134,11,0.2)] hover:shadow-[0_0_50px_rgba(184,134,11,0.4)] cursor-pointer"
+          >
+            SAY HELLO
+          </a>
+
+          <div className="mt-24 flex justify-center gap-12">
+            {CONTACT_LINKS.map((link) => (
+              <a
+                key={link.id}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm uppercase tracking-[0.2em] text-textBase/40 hover:text-primary transition-colors duration-300 border-b border-transparent hover:border-primary pb-1"
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
-          <div className="flex gap-3 w-full sm:w-auto">
-            <button
-              onClick={handleCopyEmail}
-              className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-neutral hover:bg-primary/10 border border-primary/30 hover:border-primary text-textBase transition-all duration-300 group"
-              title="Copy Email"
-            >
-              <FontAwesomeIcon icon={copied ? faCheck : faCopy} className={copied ? "text-green-400" : "text-primary group-hover:text-accent"} />
-              <span className="font-medium">{copied ? 'Copied!' : 'Copy'}</span>
-            </button>
-            <a
-              href={`mailto:${YOUR_EMAIL}`}
-              className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary hover:bg-primary-dark text-background font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300 transform hover:-translate-y-0.5"
-            >
-              <FontAwesomeIcon icon={faPaperPlane} />
-              <span>Send</span>
-            </a>
-          </div>
-        </div>
-
-        {/* Social Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-          {CONTACT_LINKS.map((link, index) => (
-            <a
-              key={link.id}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative bg-background/50 backdrop-blur-sm border border-white/5 hover:border-primary/30 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="relative w-14 h-14 flex items-center justify-center rounded-full bg-neutral transition-colors duration-300">
-                <img
-                  src={link.icon}
-                  alt={link.name}
-                  className="w-8 h-8 object-contain transition-all duration-300"
-                />
-                {/* Ring Animation */}
-                <div className="absolute inset-0 rounded-full border border-primary/20 scale-100 group-hover:scale-125 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              </div>
-
-              <div className="text-center">
-                <h4 className="text-lg font-semibold text-textBase group-hover:text-primary transition-colors duration-300">{link.name}</h4>
-                <span className="text-xs text-textBase/50 group-hover:text-textBase/70 transition-colors duration-300">Connect</span>
-              </div>
-
-              {/* Corner Accents */}
-              <div className="absolute top-2 right-2 w-2 h-2 border-t border-r border-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute bottom-2 left-2 w-2 h-2 border-b border-l border-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </a>
-          ))}
-        </div>
-
+        </motion.div>
       </div>
     </SectionWrapper>
   );

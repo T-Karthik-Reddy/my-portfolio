@@ -11,31 +11,33 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        serif: ['"Playfair Display"', 'serif'],
         mono: ['monospace', 'monospace'],
       },
       colors: {
         // Plasma Fade Palette (as per PDF)
-        background: '#1F1B24', // Dusty dark purple (almost black)
-        textBase: '#E0E0E0',   // Soft white for general text
-        primary: { // Lavender gray
-          DEFAULT: '#8E9AAF',
-          light: '#A7B4C8', // Lighter
-          dark: '#758AA0',  // Darker
+        // Vogue Light Theme Palette (Sky Blue & Gold)
+        background: '#E0F2F7', // Pale Sky Blue
+        textBase: '#1a1a1a',   // Dark Gray/Black for contrast
+        primary: { 
+          DEFAULT: '#B8860B', // Dark Goldenrod
+          light: '#DAA520',   // Goldenrod
+          dark: '#8B6508',    // Darker Gold
         },
-        accent: { // Muted magenta
-          DEFAULT: '#C792EA',
-          light: '#DAB6F5',
-          dark: '#B078D0',
+        accent: { 
+          DEFAULT: '#FFFFFF', // White (for cards/sections)
+          light: '#F0F8FF',   // Alice Blue
+          dark: '#87CEEB',    // Sky Blue (for emphasis)
         },
-        neutral: { // Shades related to background and text
-          light: '#3A3541',    // Lighter shade for cards or secondary backgrounds
-          DEFAULT: '#2B2733',  // For card backgrounds, slightly lighter than main bg
-          dark: '#1F1B24',    // Main background color (same as 'background')
-          darker: '#15121A',  // Even darker for subtle borders or depths
+        neutral: { 
+          light: '#FFFFFF',   // White
+          DEFAULT: '#F5F5F5', // Off-white
+          dark: '#E0F2F7',    // Main background match
+          darker: '#B0E0E6',  // Powder Blue
         },
-        systemError: { // For chatbot error messages
-          bg: 'rgba(199, 146, 234, 0.1)', // accent/10
-          text: '#DAB6F5' // accent-light
+        systemError: { 
+          bg: 'rgba(184, 134, 11, 0.1)', 
+          text: '#B8860B' 
         },
       },
       animation: {
