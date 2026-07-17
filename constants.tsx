@@ -51,25 +51,53 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const ALL_SKILLS: Skill[] = [
-  { id: 'java', name: 'Java', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/java-logo.png' },
-  { id: 'python', name: 'Python', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/python-logo.png' },
-  { id: 'cpp', name: 'C++', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/cpp-logo.png' },
-  { id: 'c', name: 'C', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/c-logo.png' },
-  { id: 'rust', name: 'Rust', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/rust-logo.png' },
-  { id: 'sql', name: 'SQL', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/mysql-logo.png' },
-  { id: 'javascript', name: 'JavaScript/TypeScript', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/javascript-logo.png' },
-  { id: 'pytorch', name: 'PyTorch', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/pytorch-logo.png' },
-  { id: 'tensorflow', name: 'TensorFlow', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/tensorflow-logo.png' },
-  { id: 'huggingface', name: 'Hugging Face', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/huggingface-logo.png' },
-  { id: 'langchain', name: 'LangChain', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/langchain-logo.png' },
-  { id: 'fastapi', name: 'FastAPI', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/fastapi-logo.png' },
-  { id: 'grpc', name: 'gRPC', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/grpc-logo.png' },
-  { id: 'postgres', name: 'PostgreSQL', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/postgres-logo.png' },
-  { id: 'mongodb', name: 'MongoDB', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/mongodb-logo.png' },
-  { id: 'redis', name: 'Redis', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/redis-logo.png' },
-  { id: 'docker', name: 'Docker', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/docker-logo.png' },
-  { id: 'kubernetes', name: 'Kubernetes', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/kubernetes-logo.png' },
-  { id: 'aws', name: 'AWS', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/aws-logo.png' },
+  // Languages
+  { id: 'java', name: 'Java', icon: '' },
+  { id: 'python', name: 'Python', icon: '' },
+  { id: 'cpp', name: 'C++', icon: '' },
+  { id: 'c', name: 'C', icon: '' },
+  { id: 'rust', name: 'Rust', icon: '' },
+  { id: 'sql', name: 'SQL', icon: '' },
+  { id: 'javascript', name: 'JavaScript/TypeScript', icon: '' },
+  // AI/ML
+  { id: 'pytorch', name: 'PyTorch', icon: '' },
+  { id: 'tensorflow', name: 'TensorFlow', icon: '' },
+  { id: 'huggingface', name: 'Hugging Face', icon: '' },
+  { id: 'langchain', name: 'LangChain', icon: '' },
+  { id: 'lora', name: 'LoRA/PEFT', icon: '' },
+  { id: 'rag', name: 'RAG', icon: '' },
+  { id: 'faiss', name: 'FAISS', icon: '' },
+  { id: 'tensorrt', name: 'TensorRT', icon: '' },
+  { id: 'genai', name: 'Generative AI', icon: '' },
+  // Systems & Backend
+  { id: 'dist_systems', name: 'Distributed Systems', icon: '' },
+  { id: 'java_nio', name: 'Java NIO', icon: '' },
+  { id: 'io_uring', name: 'Linux io_uring', icon: '' },
+  { id: 'tcp', name: 'TCP Protocol Design', icon: '' },
+  { id: 'grpc', name: 'gRPC', icon: '' },
+  { id: 'rest', name: 'REST APIs', icon: '' },
+  { id: 'fastapi', name: 'FastAPI', icon: '' },
+  { id: 'nodejs', name: 'Node.js', icon: '' },
+  // Databases & Data
+  { id: 'postgres', name: 'PostgreSQL', icon: '' },
+  { id: 'mongodb', name: 'MongoDB', icon: '' },
+  { id: 'chromadb', name: 'Chroma DB', icon: '' },
+  { id: 'redis', name: 'Redis', icon: '' },
+  { id: 'leveldb', name: 'LevelDB', icon: '' },
+  { id: 'sql_opt', name: 'SQL query optimization', icon: '' },
+  // Cloud & DevOps
+  { id: 'aws', name: 'AWS (EC2, S3)', icon: '' },
+  { id: 'gcp', name: 'Google Cloud Platform', icon: '' },
+  { id: 'docker', name: 'Docker', icon: '' },
+  { id: 'kubernetes', name: 'Kubernetes', icon: '' },
+  { id: 'cicd', name: 'CI/CD', icon: '' },
+  // Core CS
+  { id: 'dsa', name: 'Data Structures & Algorithms', icon: '' },
+  { id: 'sysdesign', name: 'System Design', icon: '' },
+  { id: 'os', name: 'Operating Systems', icon: '' },
+  { id: 'network', name: 'Computer Networks', icon: '' },
+  { id: 'concurrency', name: 'Concurrency', icon: '' },
+  { id: 'oop', name: 'OOP', icon: '' }
 ];
 
 export const CONTACT_LINKS: ContactLink[] = [

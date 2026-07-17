@@ -6,9 +6,12 @@ import { ALL_SKILLS } from '../constants';
 const SkillsSection: React.FC<{ id: string }> = ({ id }) => {
     // Group skills by category for "Editorial" layout
     const categories = {
-        "Languages": ['c', 'cpp', 'java', 'python', 'go', 'solidity', 'bash', 'html5', 'javascript', 'css3', 'react', 'nodejs', 'express', 'sql'],
-        "System & Tools": ['linux', 'bash', 'ansible', 'docker', 'kubernetes', 'jenkins', 'git', 'wireshark', 'jira'],
-        "Frameworks": ['pytorch', 'keras', 'nlp', 'flask']
+        "Languages": ['java', 'python', 'cpp', 'c', 'rust', 'sql', 'javascript'],
+        "AI/ML": ['pytorch', 'tensorflow', 'huggingface', 'langchain', 'lora', 'rag', 'faiss', 'tensorrt', 'genai'],
+        "Systems & Backend": ['dist_systems', 'java_nio', 'io_uring', 'tcp', 'grpc', 'rest', 'fastapi', 'nodejs'],
+        "Databases & Data": ['postgres', 'mongodb', 'chromadb', 'redis', 'leveldb', 'sql_opt'],
+        "Cloud & DevOps": ['aws', 'gcp', 'docker', 'kubernetes', 'cicd'],
+        "Core CS": ['dsa', 'sysdesign', 'os', 'network', 'concurrency', 'oop']
     };
 
     return (
