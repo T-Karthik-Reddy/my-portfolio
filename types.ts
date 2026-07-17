@@ -19,11 +19,12 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  imageUrl: string;
   tags: string[];
+  performanceMetrics: string[];
+  architecture: string[];
   liveUrl?: string;
   repoUrl?: string;
-  date?: string; // Added optional date field
+  date?: string;
 }
 
 export interface ContactLink {

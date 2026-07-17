@@ -163,43 +163,78 @@ export const EXPERIENCE_DATA: Experience[] = [
 
 export const PROJECTS_DATA: Project[] = [
   {
+    id: 'project-agent-engine',
+    title: 'High-Frequency Multi-Agent Orchestration Engine',
+    description: 'A High-Frequency Trading (HFT)-grade AI Orchestration Engine built purely in Rust. Designed to bypass network bottlenecks, eliminate CPU false sharing, and execute million-agent mathematical graph searches directly on bare-metal silicon.',
+    tags: ['Rust', 'Lock-Free', 'Bare-Metal', 'Atomics'],
+    performanceMetrics: [
+      '2.42M agents/sec peak throughput',
+      '413ns average latency',
+      'Multi-Consumer CPU Partitioning',
+      'Striped SPSC Queues (Zero False Sharing)'
+    ],
+    architecture: ['Agents', 'SPSC Queues', 'Consumer Cores (NSW Graph Math)'],
+    date: 'Recent',
+    repoUrl: 'https://github.com/T-Karthik-Reddy/Multi-Agent-Orhcestrator-Engine'
+  },
+  {
     id: 'project-kv-store',
     title: 'High-Performance Distributed Key-Value Store',
-    description: 'Built a distributed key-value store from scratch, benchmarking at 1,640,631 Requests/sec using wrk with Lua HTTP pipelining on a Dockerized Ubuntu 24.04 deployment. Engineered a robust threading model and implemented the Raft consensus algorithm for strict fault tolerance and leader election.',
-    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/kv-store.png',
+    description: 'A lightning-fast, highly concurrent distributed Key-Value store leveraging io_uring with Kernel Polling (SQPOLL) and a custom work-stealing thread pool to achieve extreme throughput.',
     tags: ['C++20', 'io_uring', 'Raft Consensus', 'Zero-Copy'],
+    performanceMetrics: [
+      '1,640,631 Requests/sec',
+      '6.72ms Avg Latency',
+      'Single-Producer io_uring Architecture',
+      'Fully pipelined HTTP ingestion'
+    ],
+    architecture: ['HTTP Client', 'Work-Stealing Pool', 'io_uring Ring', 'Storage & WAL'],
     date: 'Recent',
+    repoUrl: 'https://github.com/T-Karthik-Reddy/Distributed-KV-Store'
   },
   {
     id: 'project-message-broker',
     title: 'Low-Latency Distributed Message Broker',
-    description: 'Created a distributed message broker measuring 1,000,000 ops/sec on Linux by integrating io_uring via Java 22’s Project Panama to streamline zero-copy network ingestion. Established comprehensive benchmarking and observability pipelines using JMH on an arm64 architecture, achieving a 133.8ns response time.',
-    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/message-broker.png',
-    tags: ['Java 22 (FFM API)', 'io_uring', 'Netty', 'Disruptor'],
+    description: 'A high-performance event streaming broker in Java that bypasses standard abstractions. Utilizes Project Panama (FFM API) and an LMAX Disruptor for a strictly Zero-GC hot path.',
+    tags: ['Java 22', 'io_uring / mmap', 'Netty', 'Disruptor'],
+    performanceMetrics: [
+      '> 1,000,000 ops/sec (Linux NVMe)',
+      '133.8 ns inter-thread publish latency',
+      '0 Bytes/op allocations on hot path',
+      'CPU Cache-Line Padded Events'
+    ],
+    architecture: ['Netty TCP', 'LMAX Disruptor', 'Page Cache / io_uring'],
     date: 'Recent',
-  },
-  {
-    id: 'project-agent-engine',
-    title: 'High-Frequency Multi-Agent Orchestration Engine',
-    description: 'Developed a highly resilient orchestration engine in Rust to manage massive agent swarms, focusing on predictable system behavior and strict resource allocation. Designed reliable inter-agent communication buses, preventing race conditions across thousands of parallel execution streams (2.42 Million agents/sec).',
-    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/agent-engine.png',
-    tags: ['Rust', 'Lock-Free Concurrency', 'Bare-Metal', 'Atomics'],
-    date: 'Recent',
+    repoUrl: 'https://github.com/T-Karthik-Reddy/Distributed-Message-Broker'
   },
   {
     id: 'project-wasm-runtime',
-    title: 'Distributed WebAssembly (WASM) Serverless Runtime',
-    description: 'Implemented a distributed edge-compute runtime for deploying untrusted WebAssembly modules, engineering a secure provisioning pipeline that achieves 54.16µs cold-starts. Engineered a fault-tolerant Stateful Live Migration protocol via gRPC and integrated the Wasmtime JIT compiler for memory isolation.',
-    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/wasm-runtime.png',
+    title: 'Distributed WebAssembly Serverless Runtime',
+    description: 'A high-performance distributed serverless runtime built in Rust simulating edge-compute infrastructure. Executes untrusted WebAssembly code with microsecond-scale cold starts and stateful live migration.',
     tags: ['Rust', 'Wasmtime', 'gRPC', 'JIT Compilation'],
+    performanceMetrics: [
+      '54.16 µs Cold Starts',
+      '3.81 ms Stateful Live Migration',
+      'Zero-Trust Memory Isolation',
+      'Pre-allocated Pooling Allocator'
+    ],
+    architecture: ['gRPC Controller', 'Worker Node', 'Wasmtime JIT Sandbox'],
     date: 'Recent',
+    repoUrl: 'https://github.com/T-Karthik-Reddy/WASM-Serverless-Runtime'
   },
   {
-    id: 'project-web3-game',
-    title: 'Online PVP Game Platform with Crypto Rewards',
-    description: 'Developed a real-time PVP gaming platform using WebSockets for fast-paced gameplay. Integrated with the Ethereum blockchain via Solidity smart contracts and MetaMask for secure, automated crypto rewards for winners.',
-    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/web3-project.png',
-    tags: ['Solidity', 'Smart Contracts', 'WebSockets', 'GoLang'],
-    date: 'June. 2025',
+    id: 'project-scholarflow',
+    title: 'ScholarFlow',
+    description: 'An elegant, local-first web application designed for researchers to intuitively manage, read, and chat with arXiv research papers, featuring an auto-implement feature powered by Gemini.',
+    tags: ['React', 'FastAPI', 'Gemini API', 'Local-first'],
+    performanceMetrics: [
+      'Local PDF File System Storage',
+      'Generates runnable code projects',
+      'Zero Server Persistance',
+      'Continuous scroll advanced PDF viewer'
+    ],
+    architecture: ['React UI', 'FastAPI Backend', 'SQLite', 'File System API'],
+    date: 'Recent',
+    repoUrl: 'https://github.com/T-Karthik-Reddy/ScholarFlow'
   },
 ];
