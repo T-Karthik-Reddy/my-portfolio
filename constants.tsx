@@ -7,7 +7,7 @@ export const YOUR_NAME = "T Karthik Reddy";
 export const YOUR_EMAIL = "karthikreddytheepi@gmail.com";
 export const YOUR_LINKEDIN_USERNAME = "tkarthikreddy"; 
 export const YOUR_GITHUB_USERNAME = "T-Karthik-Reddy"; 
-export const YOUR_LEETCODE_USERNAME = "tkarthikreddy"; 
+export const YOUR_LEETCODE_USERNAME = "u/T-Karthik-Reddy/"; 
 export const YOUR_RESUME_PATH = "Karthik_Resume_a.pdf";
 
 export const NAVBAR_LOGO_TEXT = "KR";
