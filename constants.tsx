@@ -3,25 +3,25 @@ import { NavItem, Skill, Project, ContactLink, Experience } from './types';
 // Import FontAwesome icons that are still used (e.g., for resume download, heart icon)
 import { faDownload, faHeart } from '@fortawesome/free-solid-svg-icons';
 
-
-// Placeholder Name and Links - REMEMBER TO REPLACE THESE!
-export const YOUR_NAME = "T Karthik Reddy"; // Updated Name
-export const YOUR_EMAIL = "karthikreddytheepi@gmail.com"; // Generic placeholder email
-export const YOUR_LINKEDIN_USERNAME = "tkarthikreddy"; // Generic placeholder
-export const YOUR_GITHUB_USERNAME = "T-Karthik-Reddy"; // Generic placeholder
-export const YOUR_LEETCODE_USERNAME = "tkarthikreddy"; // Generic placeholder for LeetCode
-// Ensure this resume path is correct and the file exists in the public folder
-export const YOUR_RESUME_PATH = "t_karthik_reddy_resume.pdf";
+export const YOUR_NAME = "T Karthik Reddy";
+export const YOUR_EMAIL = "karthikreddytheepi@gmail.com";
+export const YOUR_LINKEDIN_USERNAME = "tkarthikreddy"; 
+export const YOUR_GITHUB_USERNAME = "T-Karthik-Reddy"; 
+export const YOUR_LEETCODE_USERNAME = "tkarthikreddy"; 
+export const YOUR_RESUME_PATH = "Karthik_Resume_a.pdf";
 
 export const NAVBAR_LOGO_TEXT = "KR";
-export const SITE_TITLE = `${YOUR_NAME} | AI & Web Portfolio`;
+export const SITE_TITLE = `${YOUR_NAME} | AI & Systems Portfolio`;
 export const HERO_NAME = YOUR_NAME;
 export const FOOTER_NAME = YOUR_NAME;
 
 export const ABOUT_ME_DESCRIPTION = `
-  I am a full-stack developer who enjoys turning ideas into clean, simple, and usable products. I care both about how things work and how they look - building software that’s solid under the hood and pleasing on the screen.
+  Software Engineer focused on distributed systems, AI infrastructure, and scalable backend services. Experienced building production GenAI platforms and high-performance concurrent systems using C++, Rust, Java, and Python.
 
-  Most of my learning comes from building, breaking, and fixing things. I’m especially interested in AI and modern web technologies and enjoy exploring how they can be used to create smart, practical tools. I believe good software comes from patience, attention to detail, and a constant desire to improve - one project at a time.
+  Achievements:
+  • Winner - IBM Qiskit Fall Fest, 2024 (1/180)
+  • Technical Excellence Award - Silicon Labs Challenge, 2026 (4/440)
+  • Best Startup Ideation Award - ENTREPX, 2025 (1/90)
 `;
 
 // Export FontAwesome icons for use in components
@@ -51,41 +51,25 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const ALL_SKILLS: Skill[] = [
-  { id: 'python', name: 'Python', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/python-logo.png' },
-  { id: 'javascript', name: 'JavaScript', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/javascript-logo.png' },
-  { id: 'react', name: 'React', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/react-logo.png' },
-  { id: 'nodejs', name: 'Node.js', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/nodejs-logo.png' },
-  { id: 'html5', name: 'HTML5', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/html-logo.png' },
-  { id: 'css3', name: 'CSS3', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/css-logo.png' },
-  // Assuming user will add tailwind-logo.png to public/logos/
-  { id: 'tailwindcss', name: 'Tailwind CSS', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/tailwind-logo.png' },
-  { id: 'tensorflow', name: 'TensorFlow', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/tensorflow-logo.png' },
-  { id: 'pytorch', name: 'PyTorch', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/pytorch-logo.png' },
-  // Assuming user will add scikitlearn-logo.png to public/logos/
-  { id: 'scikitlearn', name: 'Scikit-learn', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/scikitlearn-logo.png' },
-  { id: 'git', name: 'Git', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/git-logo.png' },
-  { id: 'docker', name: 'Docker', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/docker-logo.png' },
-  { id: 'matlab', name: 'MATLAB', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/matlab-logo.png' },
-  { id: 'sql', name: 'SQL (MySQL)', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/mysql-logo.png' },
-  { id: 'postgres', name: 'PostgreSQL', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/postgres-logo.png' }, // Changed from MongoDB
-  { id: 'nlp', name: 'NLP (Hugging Face)', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/huggingface-logo.png' },
-  { id: 'cv', name: 'Computer Vision (OpenCV)', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/opencv-logo.png' },
-  { id: 'c', name: 'C', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/c-logo.png' },
-  { id: 'cpp', name: 'C++', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/cpp-logo.png' },
-  { id: 'flask', name: 'Flask', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/flask-logo.png' },
-  { id: 'keras', name: 'Keras', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/keras-logo.png' },
   { id: 'java', name: 'Java', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/java-logo.png' },
-  { id: 'jenkins', name: 'Jenkins', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/jenkins-logo.png' },
-  { id: 'spring', name: 'Spring', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/spring-logo.png' },
-  { id: 'go', name: 'Go', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/go-logo.png' },
-  { id: 'solidity', name: 'Solidity', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/solidity-logo.png' },
-  { id: 'bash', name: 'Bash', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/bash-logo.png' },
-  { id: 'linux', name: 'Linux', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/linux-logo.png' },
-  { id: 'ansible', name: 'Ansible', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/ansible-logo.png' },
+  { id: 'python', name: 'Python', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/python-logo.png' },
+  { id: 'cpp', name: 'C++', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/cpp-logo.png' },
+  { id: 'c', name: 'C', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/c-logo.png' },
+  { id: 'rust', name: 'Rust', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/rust-logo.png' },
+  { id: 'sql', name: 'SQL', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/mysql-logo.png' },
+  { id: 'javascript', name: 'JavaScript/TypeScript', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/javascript-logo.png' },
+  { id: 'pytorch', name: 'PyTorch', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/pytorch-logo.png' },
+  { id: 'tensorflow', name: 'TensorFlow', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/tensorflow-logo.png' },
+  { id: 'huggingface', name: 'Hugging Face', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/huggingface-logo.png' },
+  { id: 'langchain', name: 'LangChain', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/langchain-logo.png' },
+  { id: 'fastapi', name: 'FastAPI', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/fastapi-logo.png' },
+  { id: 'grpc', name: 'gRPC', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/grpc-logo.png' },
+  { id: 'postgres', name: 'PostgreSQL', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/postgres-logo.png' },
+  { id: 'mongodb', name: 'MongoDB', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/mongodb-logo.png' },
+  { id: 'redis', name: 'Redis', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/redis-logo.png' },
+  { id: 'docker', name: 'Docker', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/docker-logo.png' },
   { id: 'kubernetes', name: 'Kubernetes', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/kubernetes-logo.png' },
-  { id: 'wireshark', name: 'Wireshark', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/wireshark-logo.png' },
-  { id: 'jira', name: 'Jira', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/jira-logo.png' },
-  { id: 'express', name: 'ExpressJS', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/express-logo.png' },
+  { id: 'aws', name: 'AWS', icon: 'https://t-karthik-reddy.github.io/my-portfolio/logos/aws-logo.png' },
 ];
 
 export const CONTACT_LINKS: ContactLink[] = [
@@ -122,18 +106,25 @@ export const CONTACT_LINKS: ContactLink[] = [
 
 export const EXPERIENCE_DATA: Experience[] = [
   {
-    id: 'techolution-intern',
-    role: 'GEN AI Intern',
+    id: 'techolution-associate',
+    role: 'Associate AI Engineer',
     company: 'Techolution',
-    duration: 'Sept 2025 - Present',
-    description: 'Bridging academic learning with industry problem solving skills.',
+    duration: 'Mar 2026 - Present',
+    description: 'Implemented a flagship healthcare BPA platform, compressing a 6-month manual document process into a fully automated, audit-ready pipeline while maintaining HIPAA-grade compliance. Built a highly scalable multi-database system (PostgreSQL, MongoDB, Redis) supporting 15-30 microservices; engineered to support production traffic peaks of up to 500K requests. Developed intelligent code generation pipelines and multi-modal requirement extraction tools.',
+  },
+  {
+    id: 'techolution-intern',
+    role: 'Generative AI Engineer Intern',
+    company: 'Techolution',
+    duration: 'Sep 2025 - Mar 2026',
+    description: 'Designed the foundational architecture for a Pixel-to-Website AI tool; developed an optimized Monte Carlo Tree Search (MCTS) algorithm with parallel rollout execution. Managed a multi-tiered judging swarm utilizing actor-model concurrency. Integrated a dynamic conflict-resolution pipeline for a Knowledge Retrieval agent.',
   },
   {
     id: 'nrsc-intern',
-    role: 'ML Intern',
+    role: 'Research Intern',
     company: 'NRSC - ISRO',
-    duration: 'June 2025 - Aug 2025',
-    description: 'Worked in 3d CNNs and LSTM and developing end to end ML pipeline to help crop prediction using real time satellite TIFF Images and : SAR Image Despeckling using Classical and Deep Learning Approaches.',
+    duration: 'Jun 2025 - Aug 2025',
+    description: 'Evaluated and deployed Vision Transformer (ViT) architectures to denoise high-resolution SAR satellite imagery. Optimized deep learning inference pipelines utilizing mixed-precision (FP16) and batched execution, reducing VRAM footprint by 40% and accelerating throughput over baseline CNN models.',
     images: [
       '/my-portfolio/experience/nrsc-1.jpg',
       '/my-portfolio/experience/nrsc-2.jpg'
@@ -144,57 +135,43 @@ export const EXPERIENCE_DATA: Experience[] = [
 
 export const PROJECTS_DATA: Project[] = [
   {
-    id: 'project-uix-builder',
-    title: 'UIX Builder',
-    description: 'LLM powered with wire frame geneartor with crazy load of features - winning project in techolution hackathon',
-    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/uix-builder.png',
-    tags: ['LLM', 'Wireframe Generator', 'Hackathon Winner', 'AI'],
+    id: 'project-kv-store',
+    title: 'High-Performance Distributed Key-Value Store',
+    description: 'Built a distributed key-value store from scratch, benchmarking at 1,640,631 Requests/sec using wrk with Lua HTTP pipelining on a Dockerized Ubuntu 24.04 deployment. Engineered a robust threading model and implemented the Raft consensus algorithm for strict fault tolerance and leader election.',
+    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/kv-store.png',
+    tags: ['C++20', 'io_uring', 'Raft Consensus', 'Zero-Copy'],
+    date: 'Recent',
+  },
+  {
+    id: 'project-message-broker',
+    title: 'Low-Latency Distributed Message Broker',
+    description: 'Created a distributed message broker measuring 1,000,000 ops/sec on Linux by integrating io_uring via Java 22’s Project Panama to streamline zero-copy network ingestion. Established comprehensive benchmarking and observability pipelines using JMH on an arm64 architecture, achieving a 133.8ns response time.',
+    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/message-broker.png',
+    tags: ['Java 22 (FFM API)', 'io_uring', 'Netty', 'Disruptor'],
+    date: 'Recent',
+  },
+  {
+    id: 'project-agent-engine',
+    title: 'High-Frequency Multi-Agent Orchestration Engine',
+    description: 'Developed a highly resilient orchestration engine in Rust to manage massive agent swarms, focusing on predictable system behavior and strict resource allocation. Designed reliable inter-agent communication buses, preventing race conditions across thousands of parallel execution streams (2.42 Million agents/sec).',
+    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/agent-engine.png',
+    tags: ['Rust', 'Lock-Free Concurrency', 'Bare-Metal', 'Atomics'],
+    date: 'Recent',
+  },
+  {
+    id: 'project-wasm-runtime',
+    title: 'Distributed WebAssembly (WASM) Serverless Runtime',
+    description: 'Implemented a distributed edge-compute runtime for deploying untrusted WebAssembly modules, engineering a secure provisioning pipeline that achieves 54.16µs cold-starts. Engineered a fault-tolerant Stateful Live Migration protocol via gRPC and integrated the Wasmtime JIT compiler for memory isolation.',
+    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/wasm-runtime.png',
+    tags: ['Rust', 'Wasmtime', 'gRPC', 'JIT Compilation'],
     date: 'Recent',
   },
   {
     id: 'project-web3-game',
     title: 'Online PVP Game Platform with Crypto Rewards',
     description: 'Developed a real-time PVP gaming platform using WebSockets for fast-paced gameplay. Integrated with the Ethereum blockchain via Solidity smart contracts and MetaMask for secure, automated crypto rewards for winners.',
-    // Note: Ensure 'web3-project.png' is in your `public/projects/` folder.
     imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/web3-project.png',
     tags: ['Solidity', 'Smart Contracts', 'WebSockets', 'GoLang'],
-    date: 'June. 2025', // Placeholder date, feel free to change
-    // liveUrl: '#', // Add live demo URL if available
-  },
-  {
-    id: 'project-webdev',
-    title: 'Web Development',
-    description: 'Created the official website for QUBIT (Quantum Computing Club) to publish blogs, host events, and manage registrations.',
-    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/webdev-project.png',
-    tags: ['ReactJS', 'Web Development', 'Optimization', 'Qubit Club'],
-    date: 'June. 2023',
-    // repoUrl: `https://github.com/${YOUR_GITHUB_USERNAME}/qubit-website`, // Example
-    // liveUrl: '#', // Example
-  },
-  {
-    id: 'project-netsec',
-    title: 'Network Security',
-    description: 'Built a CNN-based system trained on the KDD dataset to detect network intrusions. Good performance with ADASYN for imbalanced class handling. Achieved improved accuracy and recall on minority attack types.',
-    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/netsec-project.png',
-    tags: ['CNN', 'Network Security', 'KDD Dataset', 'ADASYN', 'Machine Learning'],
-    date: 'Feb. 2025',
-    // repoUrl: `https://github.com/${YOUR_GITHUB_USERNAME}/network-intrusion-detection`, // Example
-  },
-  {
-    id: 'project-automation',
-    title: 'Automation',
-    description: 'Utilized YOLOv8 and a multi-modal strategy to classify aircraft as civilian, military, or UAV which can handle large-scale data and optimized latency by 20%. Aids military systems in real-time threat assessment.',
-    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/aircraft-project.png',
-    tags: ['YOLOv8', 'Automation', 'Aircraft Classification', 'Multi-modal', 'Latency Optimization', 'AI'],
-    date: 'Jan. 2024',
-    // repoUrl: `https://github.com/${YOUR_GITHUB_USERNAME}/aircraft-classification`, // Example
-  },
-  {
-    id: 'project-nrsc-satellite',
-    title: 'Satellite Image Processing & Vegetation Classification',
-    description: 'Developing 3D CNN and LSTM approach for classifying satellite imagery to identify and monitor vegetation changes for government applications at the National Remote Sensing Centre (NRSC).',
-    imageUrl: 'https://t-karthik-reddy.github.io/my-portfolio/projects/nrsc.png',
-    tags: ['Satellite Imagery Processing', 'Speckle Noise Techniques', '3D CNN + LSTM'],
-    date: 'Ongoing',
+    date: 'June. 2025',
   },
 ];
