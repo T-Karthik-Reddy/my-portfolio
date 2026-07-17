@@ -49,7 +49,7 @@ const AboutSectionVogue: React.FC<{ id: string }> = ({ id }) => {
                     </div>
 
                     <div className="space-y-6 text-textBase/80 font-light leading-relaxed text-lg">
-                        <p>
+                        <p className="whitespace-pre-line">
                             {ABOUT_ME_DESCRIPTION}
                         </p>
                         <p>
