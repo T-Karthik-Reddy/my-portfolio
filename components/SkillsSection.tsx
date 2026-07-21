@@ -53,11 +53,9 @@ const SkillsSection: React.FC<{ id: string }> = ({ id }) => {
                                     if (!skill) return null;
 
                                     return (
-                                        <div key={skillId} className="group flex items-center gap-3 py-2 border-b border-black/5 hover:border-primary/50 transition-colors duration-300">
-                                            <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-serif italic">
-                                                —
-                                            </span>
-                                            <span className="text-textBase/80 group-hover:text-primary-dark transition-colors duration-300 font-light tracking-wide">
+                                        <div key={skillId} className="group flex items-center gap-3 py-2.5 px-3 rounded-sm border border-transparent hover:border-primary/30 hover:bg-white/80 transition-all duration-300 shadow-2xs hover:shadow-md">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary group-hover:scale-125 transition-all duration-300"></span>
+                                            <span className="text-textBase/90 group-hover:text-primary-dark font-medium text-sm tracking-wide transition-colors duration-300">
                                                 {skill.name}
                                             </span>
                                         </div>

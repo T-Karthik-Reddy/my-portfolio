@@ -61,16 +61,49 @@ const HeroSection: React.FC<{ id: string }> = ({ id }) => {
                         </p>
                     </motion.div>
 
-                    {/* CTA Button */}
-                    <motion.a
-                        href={YOUR_RESUME_PATH}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.05 }}
-                        className="absolute bottom-12 left-6 md:left-0 pointer-events-auto bg-primary text-white px-8 py-4 rounded-full font-bold tracking-widest text-xs uppercase shadow-xl hover:bg-primary-dark transition-colors"
+                    {/* Editorial Cover-Style Action Links */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.2, duration: 0.8 }}
+                        className="absolute bottom-12 left-6 md:left-0 text-left pointer-events-auto flex flex-col sm:flex-row gap-8 sm:gap-12 items-start sm:items-end"
                     >
-                        Read The Resume
-                    </motion.a>
+                        <a
+                            href={YOUR_RESUME_PATH}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group block text-left"
+                        >
+                            <h4 className="font-serif text-2xl md:text-4xl text-white font-bold drop-shadow-lg group-hover:text-primary transition-colors duration-300">
+                                Read The <br />
+                                <span className="text-primary italic font-normal border-b border-primary/60 group-hover:border-primary pb-0.5">Resume ↗</span>
+                            </h4>
+                            <p className="mt-2 text-xs font-sans text-white/90 uppercase tracking-[0.2em] font-medium drop-shadow-md">
+                                Download CV & Credentials
+                            </p>
+                        </a>
+
+                        <a
+                            href="#projects"
+                            className="group block text-left"
+                        >
+                            <h4 className="font-serif text-2xl md:text-4xl text-white font-bold drop-shadow-lg group-hover:text-primary transition-colors duration-300">
+                                Selected <br />
+                                <span className="text-primary italic font-normal border-b border-primary/60 group-hover:border-primary pb-0.5">Works ↓</span>
+                            </h4>
+                            <p className="mt-2 text-xs font-sans text-white/90 uppercase tracking-[0.2em] font-medium drop-shadow-md">
+                                Systems & AI Systems
+                            </p>
+                        </a>
+                    </motion.div>
+
+                    {/* Scroll Down Cue */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none hidden md:flex flex-col items-center gap-2 opacity-60">
+                        <span className="text-[10px] uppercase tracking-[0.3em] text-white/80 font-mono">Scroll</span>
+                        <div className="w-4 h-7 border-2 border-white/40 rounded-full flex justify-center p-1">
+                            <div className="w-1 h-2 bg-primary rounded-full animate-bounce"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

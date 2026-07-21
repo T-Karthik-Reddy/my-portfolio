@@ -15,25 +15,24 @@ export default {
         mono: ['monospace', 'monospace'],
       },
       colors: {
-        // Plasma Fade Palette (as per PDF)
-        // Vogue Light Theme Palette (Sky Blue & Gold)
-        background: '#E0F2F7', // Pale Sky Blue
-        textBase: '#1a1a1a',   // Dark Gray/Black for contrast
+        // High-contrast luxury editorial palette
+        background: '#F8FAFC', // Crisp pearl off-white background
+        textBase: '#0F172A',   // Deep slate black for high contrast (WCAG AAA)
         primary: { 
           DEFAULT: '#B8860B', // Dark Goldenrod
-          light: '#DAA520',   // Goldenrod
-          dark: '#8B6508',    // Darker Gold
+          light: '#D4AF37',   // Metallic Champagne Gold
+          dark: '#8B6508',    // Deep Amber Gold
         },
         accent: { 
-          DEFAULT: '#FFFFFF', // White (for cards/sections)
-          light: '#F0F8FF',   // Alice Blue
-          dark: '#87CEEB',    // Sky Blue (for emphasis)
+          DEFAULT: '#FFFFFF', 
+          light: '#F1F5F9',   
+          dark: '#E2E8F0',    
         },
         neutral: { 
-          light: '#FFFFFF',   // White
-          DEFAULT: '#F5F5F5', // Off-white
-          dark: '#E0F2F7',    // Main background match
-          darker: '#B0E0E6',  // Powder Blue
+          light: '#FFFFFF',   
+          DEFAULT: '#F1F5F9', 
+          dark: '#E2E8F0',    
+          darker: '#CBD5E1',  
         },
         systemError: { 
           bg: 'rgba(184, 134, 11, 0.1)', 

@@ -230,7 +230,7 @@ export const PROJECTS_DATA: Project[] = [
     performanceMetrics: [
       'Local PDF File System Storage',
       'Generates runnable code projects',
-      'Zero Server Persistance',
+      'Zero Server Persistence',
       'Continuous scroll advanced PDF viewer'
     ],
     architecture: ['React UI', 'FastAPI Backend', 'SQLite', 'File System API'],
